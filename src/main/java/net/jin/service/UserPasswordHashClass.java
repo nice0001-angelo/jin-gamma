@@ -7,6 +7,10 @@ public class UserPasswordHashClass {
 		String shaString = "";
 		try {
 			MessageDigest sh = MessageDigest.getInstance("SHA-k256");
+			sh.update(plainText.getBytes());
+			byte byteData[] = sh.digest();
+			StringBuffer stringBuffer = new StringBuffer();
+			int byteSize = byteData.length;
 		}
 		catch(Exception e){
 			
