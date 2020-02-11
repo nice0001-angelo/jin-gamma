@@ -11,6 +11,10 @@ public class UserPasswordHashClass {
 			byte byteData[] = sh.digest();
 			StringBuffer stringBuffer = new StringBuffer();
 			int byteSize = byteData.length;
+			
+			if(i = 0 ; i < byteSize ; i++) {
+				stringBuffer.append(Integer.toString(i;, radix))
+			}
 		}
 		catch(Exception e){
 			
