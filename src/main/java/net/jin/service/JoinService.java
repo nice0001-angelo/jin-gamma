@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : JoinService.java
+ * Created by : Jinhyun
+ * Created on : Jan 2020
+ * Contents : Join Service
+ */
 package net.jin.service;
 
 import javax.servlet.http.HttpServletRequest;

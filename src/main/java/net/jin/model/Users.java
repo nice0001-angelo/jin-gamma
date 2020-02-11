@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : Users.java
+ * Created by : Jinhyun
+ * Created on : Jan 2020
+ * Contents : Users Object
+ */
 package net.jin.model;
 
 import javax.persistence.Entity;
