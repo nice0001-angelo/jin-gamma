@@ -7,11 +7,12 @@
  */
 package net.jin.controller;
 
-import javax.servlet.http.HttpServletRequest;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import net.jin.repository.UsersRepository;
 import net.jin.service.JoinService;
@@ -20,12 +21,16 @@ import net.jin.service.JoinService;
 public class UsersController {
 
 	@Autowired
-	private UsersRepository usersRepository;
+	private JoinService joinService;
 	
 	@PostMapping("/joinRequest")
-	public String joinRequest(HttpServletRequest request) {
-		JoinService joinService = new JoinService();
-		joinService.joinUser(request, usersRepository);
+	public String joinRequest(@RequestParam Map<String, String> paraMap) {
+		String userId = paraMap.get("user_id");
+		String userPw = paraMap.get("user_pw");
+		String userName = paraMap.get("user_name");
+		
+		joinService.joinUser(userId, userPw, userName);
+		
 		return "index";
 	}
 	
