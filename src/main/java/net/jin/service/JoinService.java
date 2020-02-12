@@ -35,10 +35,8 @@ public class JoinService {
 		
 		Users users = new Users();
 		users.setUser_id(userId);
-		
 		//sha256 encryption method call
 		String hashedPassword = userPasswordHashClass.getSHA256(userPw);
-		
 		users.setUser_pw(hashedPassword);
 		users.setUser_name(userName);
 		
