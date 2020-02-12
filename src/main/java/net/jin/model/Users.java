@@ -50,6 +50,8 @@ public class Users {
 		this.user_name = user_name;
 	}
 
-	
+//	public void set(String key, String value) {
+//		
+//	}
 	
 }
