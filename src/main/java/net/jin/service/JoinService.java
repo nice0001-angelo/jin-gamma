@@ -17,6 +17,28 @@ import net.jin.repository.UsersRepository;
 
 @Service
 public class JoinService {
+//	public String joinUser(String userId, String userPw, String userName) {
+//	
+//	if(userId.equals("")||userPw.equals("")||userName.equals("")) {
+//		return "join";
+//	}
+	
+//MR. Choi
+//	public String joinUser(Map<String, String> paraMap) {
+//		
+//		Users users = new Users();
+//		
+//		for (String key : paraMap.keySet()) {
+//			if (null != paraMap.get(key) || "".equals((String)paraMap.get(key))) {
+//				return "join";	
+//			}
+//		}
+//		
+//		usersRepository.save(users);
+//		return "index";
+//	}
+	
+	
 	
 	@Autowired
 	private UsersRepository usersRepository;
@@ -44,27 +66,4 @@ public class JoinService {
 		return "index";
 		
 	}
-	
-	
-	
-//	public String joinUser(String userId, String userPw, String userName) {
-//	
-//	if(userId.equals("")||userPw.equals("")||userName.equals("")) {
-//		return "join";
-//	}
-	
-//MR. Choi
-//	public String joinUser(Map<String, String> paraMap) {
-//		
-//		Users users = new Users();
-//		
-//		for (String key : paraMap.keySet()) {
-//			if (null != paraMap.get(key) || "".equals((String)paraMap.get(key))) {
-//				return "join";	
-//			}
-//		}
-//		
-//		usersRepository.save(users);
-//		return "index";
-//	}
 }
