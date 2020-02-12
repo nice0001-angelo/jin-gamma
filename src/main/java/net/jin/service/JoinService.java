@@ -7,8 +7,6 @@
  */
 package net.jin.service;
 
-import java.util.Map;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,11 +21,9 @@ public class JoinService {
 	@Autowired
 	private UsersRepository usersRepository;
 	
-//	public String joinUser(String userId, String userPw, String userName) {
-//		
-//		if(userId.equals("")||userPw.equals("")||userName.equals("")) {
-//			return "join";
-//		}
+	@Autowired
+	private UserPasswordHashClass userPasswordHashClass;
+
 	public String joinUser(HttpServletRequest request) {
 		String userId = request.getParameter("user_id");
 		String userPw = request.getParameter("user_pw");
@@ -39,7 +35,11 @@ public class JoinService {
 		
 		Users users = new Users();
 		users.setUser_id(userId);
-		users.setUser_pw(userPw);
+		
+		//sha256 encryption method call
+		String hashedPassword = userPasswordHashClass.getSHA256(userPw);
+		
+		users.setUser_pw(hashedPassword);
 		users.setUser_name(userName);
 		
 		usersRepository.save(users);
@@ -47,6 +47,13 @@ public class JoinService {
 		
 	}
 	
+	
+	
+//	public String joinUser(String userId, String userPw, String userName) {
+//	
+//	if(userId.equals("")||userPw.equals("")||userName.equals("")) {
+//		return "join";
+//	}
 	
 //MR. Choi
 //	public String joinUser(Map<String, String> paraMap) {
