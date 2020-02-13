@@ -23,6 +23,7 @@ public class Users {
 	private String user_id;
 	private String user_pw;
 	private String user_name;
+	
 	public long getId() {
 		return id;
 	}
