@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import net.jin.model.Users;
 import net.jin.repository.UsersRepository;
 
 public class LoginService {
@@ -30,11 +31,12 @@ public class LoginService {
 		}
 		
 		String hashedPassword = userPasswordHashClass.getSHA256(userPw);
+		Users users = userRepository.findByUser_idAndAndUser_pw(userId, hashedPassword);
+		if(users == null) {
+			return "login";
+		}
 		
-		userRepository.findByUser_idAndUser_pw(userId, hashedPassword);
-		
-		if()
-		return "login";
+		return "index";
 		
 	}
 

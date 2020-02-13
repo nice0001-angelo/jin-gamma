@@ -8,9 +8,11 @@
 package net.jin.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import net.jin.model.Users;
 
+@Repository
 public interface UsersRepository extends JpaRepository<Users, Long>{//<Tabel name, id type>
-	public Users findByUser_idAndUser_pw(String userId, String userPw);
+	public Users findByUser_idAndAndUser_pw(String userId, String userPw);
 }
