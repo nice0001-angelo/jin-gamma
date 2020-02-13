@@ -23,8 +23,6 @@ public class Users {
 	private String user_id;
 	private String user_pw;
 	private String user_name;
-	
-	
 	public long getId() {
 		return id;
 	}
@@ -49,6 +47,9 @@ public class Users {
 	public void setUser_name(String user_name) {
 		this.user_name = user_name;
 	}
+
+	
+	
 
 //	public void set(String key, String value) {
 //		

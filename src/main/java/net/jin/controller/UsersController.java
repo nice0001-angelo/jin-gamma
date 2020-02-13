@@ -14,7 +14,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import net.jin.service.JoinService;
-import net.jin.service.LoginService;
 
 @Controller
 public class UsersController {
@@ -22,9 +21,7 @@ public class UsersController {
 	@Autowired
 	private JoinService joinService;
 	
-	@Autowired
-	private LoginService loginService;
-	
+
 //	@PostMapping("/joinRequest")
 //	public String joinRequest(@RequestParam Map<String, String> paraMap) {
 //		String userId = paraMap.get("user_id"); 
@@ -41,8 +38,7 @@ public class UsersController {
 	}
 	
 	@PostMapping("/loginRequest")
-	public String loginRequest(HttpServletRequest request) {
-		loginService.loginUser(request);
+	public String loginRequest() {
 		return "index";
 	}
 }
