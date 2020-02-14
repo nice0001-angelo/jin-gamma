@@ -19,7 +19,7 @@ public class LoginService {
 	private UserPasswordHashClass userPasswordHashClass;
 	
 	@Autowired
-	private HttpSession session;
+	private HttpSession httpSession;
 	
 	public String loginUser(HttpServletRequest request) {
 		String userId = request.getParameter("user_id");
@@ -35,7 +35,7 @@ public class LoginService {
 			return "login";
 		}
 		
-		session.setAttribute("loginUser", users);
+		httpSession.setAttribute("loginUser", users);
 		
 		return "index";
 		

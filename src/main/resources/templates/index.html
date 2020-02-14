@@ -61,9 +61,9 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/joinPage"><span class="glyphicon glyphicon-log-in"></span> SignUp</a></li>
-        <li><a href="/loginPage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
+        <li th:if="${session.loginUser==null}"><a href="/joinPage"><span class="glyphicon glyphicon-log-in"></span> SignUp</a></li>
+        <li th:if="${session.loginUser==null}"><a href="/loginPage"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li th:if="${session.loginUser!=null}"><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> LogOut</a></li>
       </ul>
     </div>
   </div>
