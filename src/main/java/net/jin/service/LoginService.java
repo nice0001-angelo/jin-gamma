@@ -1,6 +1,7 @@
 package net.jin.service;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,6 +18,9 @@ public class LoginService {
 	@Autowired
 	private UserPasswordHashClass userPasswordHashClass;
 	
+	@Autowired
+	private HttpSession httpSession;
+	
 	public String loginUser(HttpServletRequest request) {
 		String userId = request.getParameter("user_id");
 		String userPw = request.getParameter("user_pw");
@@ -30,6 +34,8 @@ public class LoginService {
 		if (users == null) {
 			return "login";
 		}
+		
+		httpSession.setAttribute("loginUser", users);
 		
 		return "index";
 		

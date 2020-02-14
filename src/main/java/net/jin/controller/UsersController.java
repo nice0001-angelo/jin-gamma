@@ -36,13 +36,13 @@ public class UsersController {
 	
 	@PostMapping("/joinRequest")
 	public String joinRequest(HttpServletRequest request) {
-		joinService.joinUser(request);
-		return "index";
+		String page = joinService.joinUser(request);
+		return page;
 	}
 	
 	@PostMapping("/loginRequest")
 	public String loginRequest(HttpServletRequest request) {
-		loginService.loginUser(request);
-		return "index";
+		String page = loginService.loginUser(request);
+		return page;
 	}
 }
