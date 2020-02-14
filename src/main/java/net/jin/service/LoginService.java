@@ -26,11 +26,10 @@ public class LoginService {
 		}
 
 		String hashedPassword = userPasswordHashClass.getSHA256(userPw);
-//		Users users = userRepository.findbyUsersUserIdAndUserPw(userId, hashedPassword);
-//		if (users == null) {
-//			return "login";
-//		}
-		
+		Users users = userRepository.findByUseridAndPassword(userId, hashedPassword);
+		if (users == null) {
+			return "login";
+		}
 		
 		return "index";
 		

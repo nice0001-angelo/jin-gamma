@@ -15,17 +15,17 @@ import javax.persistence.Table;
 
 import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "users")
-@Data
 public class Users {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
-	private String user_id;
-	private String user_pw;
-	private String user_name;
+	private String userid;
+	private String password;
+	private String username;
 	
 	public long getId() {
 		return id;
@@ -33,28 +33,25 @@ public class Users {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getUser_id() {
-		return user_id;
+	public String getUserid() {
+		return userid;
 	}
-	public void setUser_id(String user_id) {
-		this.user_id = user_id;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
-	public String getUser_pw() {
-		return user_pw;
+	public String getPassword() {
+		return password;
 	}
-	public void setUser_pw(String user_pw) {
-		this.user_pw = user_pw;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	public String getUser_name() {
-		return user_name;
+	public String getUsername() {
+		return username;
 	}
-	public void setUser_name(String user_name) {
-		this.user_name = user_name;
+	public void setUsername(String username) {
+		this.username = username;
 	}
-
 	
-	
-
 //	public void set(String key, String value) {
 //		
 //	}
