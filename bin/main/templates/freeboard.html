@@ -104,16 +104,15 @@ footer {
 						</tr>
 					</thead>
 					<tbody>
+					<th:block th:if="${session.boardList!=null}">
+						<th:block th:each="board:${session.boardList}">
 						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
+							<td><span th:text="${board.getFreeboardid()}"></span></td>
+							<td><span th:text="${board.getTitle()}"></span></td>
+							<td><span th:text="${board.getWriter()}"></span></td>
 						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-						</tr>
+						</th:block>
+					</th:block>	
 					</tbody>
 				</table>
 			</div>

@@ -15,9 +15,8 @@ public class Freeboard {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long freeid;
+	private Long freeboardid;
 	private String content;
 	private String title;
-	
-
+	private String writer;
 }
