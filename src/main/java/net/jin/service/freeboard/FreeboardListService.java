@@ -1,8 +1,10 @@
 package net.jin.service.freeboard;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -19,10 +21,13 @@ public class FreeboardListService {
 	public List<Freeboard> freeboardList(int pageNum){
 		
 		PageRequest pageRequest = PageRequest.of(pageNum-1, 10, Sort.Direction.DESC , "freeboardid");
+		Page<Freeboard> freeboardPage = freeboardRepository.findAll(pageRequest);
 		
-		freeboardRepository.findAll(pageRequest);
-		
-		return null;
+		if(freeboardPage.getSize() == 0) {
+			return new ArrayList<Freeboard>();
+		}
+		List<Freeboard> freeboardList = freeboardPage.getContent();
+		return freeboardList;
 	}
 
 }
