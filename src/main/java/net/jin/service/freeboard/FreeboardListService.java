@@ -23,17 +23,19 @@ public class FreeboardListService {
 	@Autowired
 	private HttpSession session;
 
-	public List<Freeboard> freeboardList(int pageNum){
+	public String freeboardList(int pageNum){
 		
 		PageRequest pageRequest = PageRequest.of(pageNum-1, 10, Sort.Direction.DESC , "freeboardid");
 		Page<Freeboard> freeboardPage = freeboardRepository.findAll(pageRequest);
 		
 		if(freeboardPage.getSize() == 0) {
-			return new ArrayList<Freeboard>();
+			List<Freeboard> freeboardList = new ArrayList<Freeboard>();
+			session.setAttribute("boardList", freeboardList);
+			return "freeboard";
 		}
 		List<Freeboard> freeboardList = freeboardPage.getContent();
 		session.setAttribute("boardList", freeboardList);
-		return freeboardList;
+		return "freeboard";
 	}
 
 }
