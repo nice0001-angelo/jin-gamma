@@ -16,8 +16,6 @@ import net.jin.service.freeboard.FreeboardListService;
 @Controller
 public class FreeboardController {
 
-	@Autowired
-	private HttpSession session;
 	
 	@Autowired
 	private FreeboardListService freeboardListService;
@@ -30,11 +28,6 @@ public class FreeboardController {
 	@GetMapping("/freeboard")
 	public String freeboard(@RequestParam(value="pageNum",defaultValue = "1") String pageNum) {
 		List<Freeboard> freeboardList=freeboardListService.freeboardList(returnintValue(pageNum));
-		if (freeboardList==null) {
-			return "freeboard";
-		}
-		
-		session.setAttribute("boardList", freeboardList);
 		return "freeboard";
 	}
 }
