@@ -32,7 +32,7 @@ public class UsersController {
 //		String userName = paraMap.get("user_name");
 //		 
 //		joinService.joinUser(userId, userPw, userName);
-//      joinService.joinUser(paraMap); MR. Choi
+//      joinService.joinUser(paraMap); MR. Choi (userId, userPw, userName)를 서비스로 넘기지 않고 paraMap 객체 전체를 서비스로 넘기는 것.
 	
 	@PostMapping("/joinRequest")
 	public String joinRequest(HttpServletRequest request) {
@@ -45,4 +45,6 @@ public class UsersController {
 		String page = loginService.loginUser(request);
 		return page;
 	}
+	
+	
 }
