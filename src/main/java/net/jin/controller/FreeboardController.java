@@ -27,7 +27,7 @@ public class FreeboardController {
 	
 	@GetMapping("/freeboard")
 	public String freeboard(@RequestParam(value="pageNum",defaultValue = "1") String pageNum) {
-		List<Freeboard> freeboardList=freeboardListService.freeboardList(returnintValue(pageNum));
-		return "freeboard";
+		String page = freeboardListService.freeboardList(returnintValue(pageNum));
+		return page;
 	}
 }
