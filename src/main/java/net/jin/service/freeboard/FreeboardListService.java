@@ -29,8 +29,7 @@ public class FreeboardListService {
 		Page<Freeboard> freeboardPage = freeboardRepository.findAll(pageRequest);
 		
 		if(freeboardPage.getSize() == 0) {
-			List<Freeboard> freeboardList = new ArrayList<Freeboard>();
-			session.setAttribute("boardList", freeboardList);
+			session.setAttribute("boardList", new ArrayList<Freeboard>());
 			return "freeboard";
 		}
 		List<Freeboard> freeboardList = freeboardPage.getContent();
