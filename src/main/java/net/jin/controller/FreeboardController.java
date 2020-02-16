@@ -22,9 +22,14 @@ public class FreeboardController {
 	@Autowired
 	private FreeboardListService freeboardListService;
 	
+	private int returnintValue(String stringToint) {
+		return Integer.parseInt(stringToint);
+	}
+	
+	
 	@GetMapping("/freeboard")
-	public String freeboard(@RequestParam(value="pageNum",defaultValue = "1")String pageNum) {
-		List<Freeboard> freeboardList=freeboardListService.freeboardList(pageNum);
+	public String freeboard(@RequestParam(value="pageNum",defaultValue = "1") String pageNum) {
+		List<Freeboard> freeboardList=freeboardListService.freeboardList(returnintValue(pageNum));
 		if (freeboardList==null) {
 			return "freeboard";
 		}
