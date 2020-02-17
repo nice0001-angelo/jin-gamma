@@ -22,6 +22,9 @@ public class FreeboardListService {
 	
 	@Autowired
 	private HttpSession session;
+	
+	@Autowired
+	private PageMakerService pageMakerService;
 
 	public String freeboardList(int pageNum){
 		
