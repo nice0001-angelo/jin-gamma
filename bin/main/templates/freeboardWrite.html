@@ -101,6 +101,7 @@ footer {
 					<br /><br />
 					<textarea rows="" cols="" placeholder="text" name="content"></textarea>
 					<br /><br />
+					<input type="hidden" th:value="${session.loginuser.getUsername()}">
 					<input type="submit" value="write">
 				</form>
 			</div>
