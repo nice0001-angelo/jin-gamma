@@ -2,11 +2,13 @@ package net.jin.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import net.jin.model.Freeboard;
@@ -29,5 +31,10 @@ public class FreeboardController {
 	public String freeboard(@RequestParam(value="pageNum",defaultValue = "1") String pageNum) {
 		String page = freeboardListService.freeboardList(returnintValue(pageNum));
 		return page;
+	}
+	
+	@PostMapping("/freeboardWriteRequest")
+	public String freeboadrWriteRequest(HttpServletRequest request) {
+		return "redirect:/freeboard";
 	}
 }
