@@ -96,12 +96,12 @@ footer {
 			<div class="col-sm-8 text-left">
 				<h1>Freeboard</h1>
 				<br /><br />
-				<form action="freeboardWriteRequest" mdthod="post">
-					<input type='text' placeholder="title"/>
+				<form action="freeboardWriteRequest" method="post">
+					<input type="text" placeholder="title" name="title"/>
 					<br /><br />
-					<textarea rows="" cols="" placeholder="text" name="content"></textarea>
+					<textarea placeholder="content" name="content"></textarea>
 					<br /><br />
-					<input type="hidden" th:value="${session.loginuser.getUsername()}">
+					<input type="hidden" th:value="${session.loginUser.getUsername()}">
 					<input type="submit" value="write">
 				</form>
 			</div>
