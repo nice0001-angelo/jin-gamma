@@ -1,9 +1,6 @@
 package net.jin.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import net.jin.model.Freeboard;
 import net.jin.service.freeboard.FreeboardListService;
+import net.jin.service.freeboard.FreeboardWriteService;
 
 
 @Controller
@@ -22,6 +19,10 @@ public class FreeboardController {
 	@Autowired
 	private FreeboardListService freeboardListService;
 	
+	@Autowired
+	private FreeboardWriteService freeboardWriteService; 
+
+
 	private int returnintValue(String stringToint) {
 		return Integer.parseInt(stringToint);
 	}
@@ -34,7 +35,10 @@ public class FreeboardController {
 	}
 	
 	@PostMapping("/freeboardWriteRequest")
-	public String freeboadrWriteRequest(HttpServletRequest request) {
-		return "redirect:/freeboard";
+	public String freeboardWriteRequest(HttpServletRequest request) {
+		freeboardWriteService.write(request);
+			return "redirect:/freeboard";
+		
 	}
+	
 }

@@ -18,7 +18,7 @@ public class FreeboardWriteService {
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
 		String writer = request.getParameter("writer");
-
+		
 		Freeboard freeboard = new Freeboard();
 		freeboard.setContent(content);
 		freeboard.setTitle(title);
