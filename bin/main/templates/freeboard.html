@@ -118,9 +118,13 @@ footer {
 				</table>
 				
 				<!--Page number  -->
-				<th:block th:each="pageNumber:${#numbers.sequence(session.pageMaker.getStartPage(),session.pageMaker.getEndPage())}">
-					<a th:text="${pageNumber}"></a>
-				</th:block>
+
+				<a th:if="${session.pageMaker.isPrev()}" style="text-decoration: none;" th:onclick="|javascript:page('${session.pageMaker.getStartPage()}')|">&laquo;</a>
+    			<th:block th:each="pageNum:${#numbers.sequence(session.pageMaker.getStartPage(),session.pageMaker.getEndPage())}">
+        			&nbsp;<a th:text="${pageNum}" th:onclick="|javascript:page('${pageNum}')|"></a>&nbsp;
+	    		</th:block>
+				<a th:if="${session.pageMaker.isNext()}" style="text-decoration: none;" th:onclick="|javascript:page('${session.pageMaker.getEndPage()}')|">&raquo;</a>
+
 				
 			</div>
 			<div class="col-sm-2 sidenav">
