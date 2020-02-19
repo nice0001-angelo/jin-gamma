@@ -119,7 +119,7 @@ footer {
 				
 				<!--Page number  -->
 				<th:block th:each="pageNumber:${#numbers.sequence(session.pageMaker.getStartPage(),session.pageMaker.getEndPage())}">
-					<a th:text="pageNumber"></a>
+					<a th:text="${pageNumber}"></a>
 				</th:block>
 				
 			</div>
