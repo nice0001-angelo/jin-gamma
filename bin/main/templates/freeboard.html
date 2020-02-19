@@ -116,6 +116,12 @@ footer {
 					</th:block>	
 					</tbody>
 				</table>
+				
+				<!--Page number  -->
+				<th:block th:each="pageNumber:${#numbers.sequence(session.pageMaker.getStartPage(),session.pageMaker.getEndPage())}">
+					<a th:text="pageNumber"></a>
+				</th:block>
+				
 			</div>
 			<div class="col-sm-2 sidenav">
 				<div class="well">
