@@ -41,4 +41,9 @@ public class FreeboardController {
 		
 	}
 	
+	@GetMapping("/freeboardInfo")
+	public String getPost(HttpServletRequest request) {
+		return "freeboardInfo";
+	}
+	
 }
