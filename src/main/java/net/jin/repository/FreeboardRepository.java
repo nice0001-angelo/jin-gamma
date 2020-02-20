@@ -7,5 +7,7 @@ import net.jin.model.Freeboard;
 
 @Repository
 public interface FreeboardRepository extends JpaRepository<Freeboard, Long>{
+	
+	Freeboard findByFreeboardid(Long freeboardId);
 
 }

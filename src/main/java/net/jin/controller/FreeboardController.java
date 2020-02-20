@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import net.jin.repository.FreeboardRepository;
 import net.jin.service.FreeboardInfoService;
 import net.jin.service.freeboard.FreeboardListService;
 import net.jin.service.freeboard.FreeboardWriteService;
