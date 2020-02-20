@@ -14,10 +14,6 @@
 	function page(pageNum){
 		location.href="/freeboard?pageNum="+pageNum;
 	}
-	
-	function getPost(freeboardId){
-		location.href="freeboardInfo?freeboardId"+freeboardId;
-	}
 </script>
 	
 <style>
@@ -119,7 +115,7 @@ footer {
 						<th:block th:each="board:${session.boardList}">
 						<tr>
 							<td><span th:text="${board.getFreeboardid()}"></span></td>
-							<td><a th:onclick="|javascript:getPost('${board.getFreeboardId()}')|" th:text="${board.getTitle()}"></a></td>
+							<td><span th:text="${board.getTitle()}"></span></td>
 							<td><span th:text="${board.getWriter()}"></span></td>
 						</tr>
 						</th:block>

@@ -29,9 +29,9 @@ public class FreeboardListService {
 
 	public String freeboardList(int pageNum){
 		
-		PageMaker pageMaker = pageMakerService.generatePageMaker(pageNum, 10, freeboardRepository);
+		PageMaker pageMaker = pageMakerService.generatePageMaker(pageNum, 5, freeboardRepository);
 		
-		PageRequest pageRequest = PageRequest.of(pageNum-1, 10, Sort.Direction.DESC , "freeboardid");
+		PageRequest pageRequest = PageRequest.of(pageNum-1, 5, Sort.Direction.DESC , "freeboardid");
 		Page<Freeboard> freeboardPage = freeboardRepository.findAll(pageRequest);
 		
 		if(freeboardPage.getSize() == 0) {
