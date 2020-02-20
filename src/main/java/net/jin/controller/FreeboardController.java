@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import net.jin.service.FreeboardInfoService;
 import net.jin.service.freeboard.FreeboardListService;
 import net.jin.service.freeboard.FreeboardWriteService;
 
@@ -21,8 +22,10 @@ public class FreeboardController {
 	
 	@Autowired
 	private FreeboardWriteService freeboardWriteService; 
-
-
+	
+	@Autowired
+	private FreeboardInfoService freeboardInfoService;
+	
 	private int returnintValue(String stringToint) {
 		return Integer.parseInt(stringToint);
 	}
@@ -43,7 +46,8 @@ public class FreeboardController {
 	
 	@GetMapping("/freeboardInfo")
 	public String getPost(@RequestParam(value="freeboardId") String freeboardId) {
-		return "freeboardInfo";
+		String page = freeboardInfoService.getFreeboardPost(freeboardId);
+		return page;
 	}
 	
 }
