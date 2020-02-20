@@ -42,7 +42,7 @@ public class FreeboardController {
 	}
 	
 	@GetMapping("/freeboardInfo")
-	public String getPost(HttpServletRequest request) {
+	public String getPost(@RequestParam(value="freeboardId") String freeboardId) {
 		return "freeboardInfo";
 	}
 	
