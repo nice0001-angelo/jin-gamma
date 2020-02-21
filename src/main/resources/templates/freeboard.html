@@ -15,9 +15,9 @@
 		location.href="/freeboard?pageNum="+pageNum;
 	}
 	
-	function getPost(freeboardId){
+/* 	function getPost(freeboardId){
 		location.href="freeboardInfo?freeboardId"+freeboardId;
-	}
+	} */
 </script>
 	
 <style>
@@ -119,7 +119,7 @@ footer {
 						<th:block th:each="board:${session.boardList}">
 						<tr>
 							<td><span th:text="${board.getFreeboardid()}"></span></td>
-							<td><a th:onclick="|javascript:getPost('${board.getFreeboardid)}')|" th:text="${board.getTitle()}"></a></td>
+<!-- 							<td><a th:onclick="|javascript:getPost('${board.getFreeboardid)}')|" th:text="${board.getTitle()}"></a></td> -->
 							<td><span th:text="${board.getWriter()}"></span></td>
 						</tr>
 						</th:block>
