@@ -104,8 +104,10 @@ footer {
 				</p>
 			</div>
 			<div class="col-sm-8 text-left">
-				Title is : <h5 th:text="${session.freeboard.getTitle()}"></h5>
-				Content is : <h5 th:text="${session.freeboard.getContent()}"></h5>
+				<h5 th:text="${session.freeboard.getTitle()}"></h5>
+				<br /><br />
+				<textarea th:value="${session.freeboard.getContent()}"></textarea>
+				<br /><br />
 				<a href="/freeboardWritePage">Write</a>
 				<table class="table table-hover">
 					<thead>
