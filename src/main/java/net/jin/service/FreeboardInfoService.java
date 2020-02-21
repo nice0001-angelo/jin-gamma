@@ -25,7 +25,6 @@ public class FreeboardInfoService {
 		}
 		
 		httpSession.setAttribute("freeboard", freeboard);
-		
 		return "freeboardInfo";
 	}
 
