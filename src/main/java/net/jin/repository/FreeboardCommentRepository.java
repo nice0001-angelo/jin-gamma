@@ -9,5 +9,5 @@ import net.jin.model.FreeboardComment;
 
 @Repository
 public interface FreeboardCommentRepository extends JpaRepository<FreeboardComment, Long>{
-	List<FreeboardComment> findAllByFreeboardId(Long freeboardId); 
+	List<FreeboardComment> findAllByFreeboardid(Long freeboardId); 
 }

@@ -15,6 +15,8 @@ public class FreeboardCommentListService {
 	private FreeboardCommentRepository freeboardCommentRepository;
 		
 	public List<FreeboardComment> getList(Long freeboardId){
+		List<FreeboardComment> freeboardCommentList = freeboardCommentRepository.findAllByFreeboardId(freeboardId);
+		
 		return null;
 	}
 }
