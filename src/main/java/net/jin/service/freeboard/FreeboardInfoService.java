@@ -1,4 +1,4 @@
-package net.jin.service;
+package net.jin.service.freeboard;
 
 import javax.servlet.http.HttpSession;
 
