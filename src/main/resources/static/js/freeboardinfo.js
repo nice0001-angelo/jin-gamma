@@ -5,9 +5,9 @@
 $(function() {
         function getList() {
             $.ajax({
-                url : "${pageContext.request.contextPath}/memberList",
+                url : "/freeboardCommentList",
                 type : "get",
-                dataType : "xml",
+                dataType : "json",
                 success : function(data) {
                     var table = "" ;
                     $(data).find("member").each(function() {
