@@ -37,7 +37,67 @@ public class FreeboardComment {
 	@JoinColumn(foreignKey = @ForeignKey(name = "freeboardid"))
 	private Long freeboardid;
 	
+	@Column(name = "commentoriginid")
 	private Long commentOriginid;
 	
+	@Column(name = "commentlevel")
 	private int commentLevel;
+
+	public Long getCommentid() {
+		return commentid;
+	}
+
+	public void setCommentid(Long commentid) {
+		this.commentid = commentid;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public Date getWritedate() {
+		return writedate;
+	}
+
+	public void setWritedate(Date writedate) {
+		this.writedate = writedate;
+	}
+
+	public String getWriter() {
+		return writer;
+	}
+
+	public void setWriter(String writer) {
+		this.writer = writer;
+	}
+
+	public Long getFreeboardid() {
+		return freeboardid;
+	}
+
+	public void setFreeboardid(Long freeboardid) {
+		this.freeboardid = freeboardid;
+	}
+
+	public Long getCommentOriginid() {
+		return commentOriginid;
+	}
+
+	public void setCommentOriginid(Long commentOriginid) {
+		this.commentOriginid = commentOriginid;
+	}
+
+	public int getCommentLevel() {
+		return commentLevel;
+	}
+
+	public void setCommentLevel(int commentLevel) {
+		this.commentLevel = commentLevel;
+	}
+	
+	
 }
