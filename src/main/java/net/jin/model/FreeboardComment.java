@@ -36,4 +36,8 @@ public class FreeboardComment {
 	@ManyToOne(targetEntity = Freeboard.class)
 	@JoinColumn(foreignKey = @ForeignKey(name = "freeboardid"))
 	private Long freeboardid;
+	
+	private Long commentOriginid;
+	
+	private int commentLevel;
 }
