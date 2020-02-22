@@ -106,39 +106,8 @@ footer {
 			<div class="col-sm-8 text-left">
 				<h5 th:text="${session.freeboard.getTitle()}"></h5>
 				<br /><br />
-				<textarea th:text="${session.freeboard.getContent()}"></textarea>
+				<textarea th:text="${session.freeboard.getContent()}" readonly="readonly"></textarea>
 				<br /><br />
-				<a href="/freeboardWritePage">Write</a>
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th scope="col">#</th>
-							<th scope="col">Title</th>
-							<th scope="col">Writer</th>
-						</tr>
-					</thead>
-					<tbody>
-					<th:block th:if="${session.boardList!=null}">
-						<th:block th:each="board:${session.boardList}">
-						<tr>
-							<td><span th:text="${board.getFreeboardid()}"></span></td>
-							<td><a th:onclick="|javascript:getPost('${board.getFreeboardid()}')|" th:text="${board.getTitle()}"></a></td>
-							<td><span th:text="${board.getWriter()}"></span></td>
-						</tr>
-						</th:block>
-					</th:block>	
-					</tbody>
-				</table>
-				
-				<!--Page number  -->
-
-				<a th:if="${session.pageMaker.isPrev()}" style="text-decoration: none;" th:onclick="|javascript:page('${session.pageMaker.getStartPage()}')|">&laquo;</a>
-    			<th:block th:each="pageNum:${#numbers.sequence(session.pageMaker.getStartPage(),session.pageMaker.getEndPage())}">
-        			&nbsp;<a th:text="${pageNum}" th:onclick="|javascript:page('${pageNum}')|"></a>&nbsp;
-	    		</th:block>
-				<a th:if="${session.pageMaker.isNext()}" style="text-decoration: none;" th:onclick="|javascript:page('${session.pageMaker.getEndPage()}')|">&raquo;</a>
-
-				
 			</div>
 			<div class="col-sm-2 sidenav">
 				<div class="well">
