@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : Freeboard.java
+ * Created by : Jinhyun
+ * Created on : Feb 2020
+ * Contents : Model for Freeboard
+ */
 package net.jin.model;
 
 import javax.persistence.Column;

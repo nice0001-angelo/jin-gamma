@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : FreeboardComment.java
+ * Created by : Jinhyun
+ * Created on : Jan 2020
+ * Contents : Model for FreeboardComment
+ */
 package net.jin.model;
 
 import java.util.Date;

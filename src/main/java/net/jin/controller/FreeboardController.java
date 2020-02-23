@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : FreeboardController.java
+ * Created by : Jinhyun
+ * Created on : Feb 2020
+ * Contents : Controller.java
+ */
 package net.jin.controller;
 
 import javax.servlet.http.HttpServletRequest;
