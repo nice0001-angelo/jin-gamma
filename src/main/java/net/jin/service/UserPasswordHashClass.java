@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : UserPasswordHashClass.java
+ * Created by : Jinhyun
+ * Created on : Jan 2020
+ * Contents : For UserPasswordHashing
+ */
 package net.jin.service;
 
 import java.security.MessageDigest;
