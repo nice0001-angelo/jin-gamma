@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : PageMaker.java
+ * Created by : Jinhyun
+ * Created on : Feb 2020
+ * Contents : Class for paging
+ */
 package net.jin.pageMaker;
 
 public class PageMaker {
