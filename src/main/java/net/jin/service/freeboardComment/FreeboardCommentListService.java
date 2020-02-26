@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : FreeboardCommentListService.java
+ * Created by : Jinhyun
+ * Created on : Feb 2020
+ * Contents : For Freeboard CommentList Service
+ */
 package net.jin.service.freeboardComment;
 
 import java.util.LinkedList;

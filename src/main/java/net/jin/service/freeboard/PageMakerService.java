@@ -1,3 +1,10 @@
+/*
+ * This is a Jin-gamma Project
+ * File name : PageMakerService.java
+ * Created by : Jinhyun
+ * Created on : Feb 2020
+ * Contents : For Paging Treatement Service
+ */
 package net.jin.service.freeboard;
 
 import org.springframework.data.jpa.repository.JpaRepository;
