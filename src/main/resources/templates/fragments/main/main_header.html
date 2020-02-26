@@ -1,11 +1,21 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<header th:fragment="mainHead">  
+<header th:fragment="mainHeader">  
   <title>Jinhyun WebPage Gamma</title>
   <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+	function page(pageNum){
+		location.href="/freeboard?pageNum="+pageNum;
+	}
+	
+ 	function getPost(freeboardId){
+		location.href="/freeboardInfo?freeboardId="+freeboardId;
+	} 
+  </script>
+	
   <style>
     /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
