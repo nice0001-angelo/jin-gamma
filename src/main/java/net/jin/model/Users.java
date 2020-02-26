@@ -13,9 +13,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.Data;
-
-@Data
 @Entity
 @Table(name = "users")
 public class Users {
@@ -23,6 +20,7 @@ public class Users {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	
 	private String userid;
 	private String password;
 	private String username;
@@ -51,9 +49,5 @@ public class Users {
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
-//	public void set(String key, String value) {
-//		
-//	}
-	
+
 }
