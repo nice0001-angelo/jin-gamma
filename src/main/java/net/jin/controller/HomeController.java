@@ -24,9 +24,9 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping("/joinPage")
-	public String joinPage() {
-		return "join";
+	@GetMapping("/signupPage")
+	public String signupPage() {
+		return "signup";
 	}
 	
 	@GetMapping("/loginPage")
