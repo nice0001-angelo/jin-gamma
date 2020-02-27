@@ -18,12 +18,12 @@ public class SignupService {
 	private UserPasswordHashClass userPasswordHashClass;
 	
 	public String signupUser(HttpServletRequest request) {
-		String userId = (String) request.getAttribute("user_id"); // return Object
-		String userPassword = (String) request.getAttribute("user_pw"); // return Object
-		String userName = request.getParameter("user_name"); // return String
+		String userId = request.getParameter("user_id"); 
+		String userPassword = request.getParameter("user_pw"); 
+		String userName = request.getParameter("user_name"); 
 		
 		  
-		if(userId==null||userPassword==null||userName==null) { 
+		if(userId.equals("")||userPassword.equals("")||userName.equals("")) { 
 			  return "signup"; 
 		}
 		
