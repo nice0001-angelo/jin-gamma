@@ -14,6 +14,9 @@ public class SignupService {
 	@Autowired
 	private UsersRepository usersRepository;
 	
+	@Autowired
+	private UserPasswordHashClass userPasswordHashClass;
+	
 	public String signupUser(HttpServletRequest request) {
 		String userId = (String) request.getAttribute("user_id"); // return Object
 		String userPassword = (String) request.getAttribute("user_pw"); // return Object
@@ -25,13 +28,13 @@ public class SignupService {
 		}
 		
 		Users users = new Users();
+		String hashedPassword = userPasswordHashClass.getSHA256(userPassword);
+		
 		users.setUserid(userId);
-		users.setPassword(userPassword);
+		users.setPassword(hashedPassword);
 		users.setUsername(userName);
 		
 		usersRepository.save(users);
-		 
-
 		return "index";
 	}
 
