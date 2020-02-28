@@ -30,7 +30,8 @@ public class FreeboardCommentController {
 
 //	@Autowired
 //	private FreeboardComment freeboardComment;
-
+//220682576421-8423sipe68k00c84bqjjro08qkp8um8v.apps.googleusercontent.com
+//-WRIwVJMIdpB7SsxNWjsNQDO	
 	@Autowired
 	private FreeboardCommentRepository freeboardCommentRepository;
 
