@@ -13,9 +13,9 @@
 			<div th:replace="fragments/main/main_lefter :: mainLefter"></div>
 			
 			<div class="col-sm-8 text-left">
-				<h5 th:text="${session.freeboard.getTitle()}"></h5>
+				<h5 th:text="${session.freeboardInfo.getTitle()}"></h5>
 				<br /><br />
-				<textarea th:text="${session.freeboard.getContent()}" readonly="readonly"></textarea>
+				<textarea th:text="${session.freeboardInfo.getContent()}" readonly="readonly"></textarea>
 				<br /><br />
 			</div>
 			
