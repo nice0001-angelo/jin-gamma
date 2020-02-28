@@ -48,7 +48,7 @@ public class FreeboardController {
 	@PostMapping("/freeboardWriteRequest")
 	public String freeboardWriteRequest(HttpServletRequest request) {
 		freeboardWriteService.write(request);
-			return "redirect:/freeboard";
+			return "redirect:/freeboardMain";
 		
 	}
 	
