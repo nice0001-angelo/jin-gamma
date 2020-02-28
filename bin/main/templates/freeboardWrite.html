@@ -13,14 +13,14 @@
 			<div th:replace="fragments/main/main_lefter :: mainLefter"></div>
 			
 			<div class="col-sm-8 text-left">
-				<h1>Freeboard</h1>
+				<h1>Freeboard Write</h1>
 				<br /><br />
 				<form action="freeboardWriteRequest" method="post">
 					<input type="text" placeholder="title" name="title"/>
 					<br /><br />
 					<textarea placeholder="content" name="content"></textarea>
 					<br /><br />
-					<input type="hidden" th:value="${session.loginUser.getUsername()}">
+					<input type="hidden" th:value="${session.loginedUser.getUsername()}">
 					<input type="submit" value="write">
 				</form>
 			</div>

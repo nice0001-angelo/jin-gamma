@@ -13,11 +13,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import net.jin.model.Users;
+
 @Controller
 public class HomeController {
 
-	@Autowired
-	private HttpSession session;
 	
 	@GetMapping("/")
 	public String index() {
@@ -35,15 +35,18 @@ public class HomeController {
 	}
 	
 	@GetMapping("/logout")
-	public String logout() {
-		session.invalidate();
+	public String logout(HttpSession httpSession) {
+		httpSession.invalidate();
 		return "index";
 	}
 		
 	@GetMapping("/freeboardWritePage")
-	public String freeboardWritePage() {
+	public String freeboardWritePage(HttpSession httpSession) {
+		Object loginedUser = httpSession.getAttribute("loginedUser");
+		if(loginedUser==null) {
+			return "login";
+		}
 		return "freeboardWrite";
-		
 	}
 	
 }

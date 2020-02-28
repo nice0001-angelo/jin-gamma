@@ -44,13 +44,12 @@ public class FreeboardListService {
 		if(freeboardPage.getSize() == 0) {
 			session.setAttribute("boardList", new ArrayList<Freeboard>());
 			session.setAttribute("pageMaker", pageMaker);
-			return "freeboard";
+			return "freeboardMain";
 		}
 		List<Freeboard> freeboardList = freeboardPage.getContent();
 		session.setAttribute("boardList", freeboardList);
 		session.setAttribute("pageMaker", pageMaker);
-		
-		return "freeboard";
+		return "freeboardMain";
 	}
 
 }
