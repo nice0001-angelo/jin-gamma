@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import net.jin.service.LoginService_;
+import net.jin.service.LoginService;
 import net.jin.service.SignupService;
 
 @Controller
@@ -23,7 +23,7 @@ public class UsersController {
 	private SignupService signupService;
 	
 	@Autowired
-	private LoginService_ loginService;
+	private LoginService loginService;
 	
 	@PostMapping("/signupRequest")
 	public String signupRequest(HttpServletRequest request) {
