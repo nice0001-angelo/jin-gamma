@@ -15,6 +15,6 @@ import net.jin.model.Users;
 @Repository
 public interface UsersRepository extends JpaRepository<Users, Long>{//<Tabel name, id type>
 
-	public Users findByUseridAndPassword(String userId, String userPw);
+	public Users findByUseridAndPassword(String userId, String userPassword);
 	
 }
