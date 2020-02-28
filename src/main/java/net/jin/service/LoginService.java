@@ -41,8 +41,7 @@ public class LoginService {
 			return "login";
 		}
 
-		httpSession.setAttribute("LoginedUser", users);
-		//httpSession.setAttribute("LoginUser", users);
+		httpSession.setAttribute("loginedUser", users);
 			
 		return "index";
 	}
