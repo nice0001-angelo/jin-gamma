@@ -29,9 +29,9 @@ public class HelloController {
 		return helloVo;
 	}
 	
-	@GetMapping("/getHelloList")
-	public List<HelloVO> getHelloList() {
-		List<HelloVO> helloList = new ArrayList<HelloVO>();
+	@GetMapping("/getHelloArrayList")
+	public ArrayList<HelloVO> getHelloList() {
+		ArrayList<HelloVO> helloArrayList = new ArrayList<HelloVO>();
 		for(int i = 0; i <= 10; i++) {
 			HelloVO helloVo = new HelloVO();
 			helloVo.setSeq(i);
@@ -40,8 +40,8 @@ public class HelloController {
 			helloVo.setContent(i + " contents");
 			helloVo.setCreateDate(new Date());
 			helloVo.setCnt(0);
-			helloList.add(helloVo);
+			helloArrayList.add(helloVo);
 		}
-		return helloList;
+		return helloArrayList;
 	}
 }
