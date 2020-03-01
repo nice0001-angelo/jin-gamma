@@ -23,7 +23,7 @@ public class HelloControllerTest {
 	private MockMvc mvc;
 	
 	@Test
-	public void hello_return() throws Exception{
+	public void helloTest() throws Exception{
 		
 		String hello = "hello";
 		
