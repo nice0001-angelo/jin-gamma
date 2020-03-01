@@ -66,6 +66,12 @@ public class Freeboard {
 	public void setWriter(String writer) {
 		this.writer = writer;
 	}
+
+	@Override
+	public String toString() {
+		return "Freeboard [freeboardid=" + freeboardid + ", content=" + content + ", title=" + title + ", writer="
+				+ writer + "]";
+	}
 	
 	
 }
