@@ -28,12 +28,9 @@ public class HelloControllerTest {
 	@Test
 	public void helloTest() throws Exception{
 		
-		String hello = "hello RestController for API Check";
-		
-		mockMvc.perform(get("/hello"))
+		mockMvc.perform(get("/hello").param("name", "jinhyun"))
 		.andExpect(status().isOk())
-		.andExpect((ResultMatcher)content().string(hello))
+		.andExpect((ResultMatcher)content().string("Hello : jinhyun"))
 		.andDo(print());
-
 	}
 }
