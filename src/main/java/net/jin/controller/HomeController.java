@@ -21,6 +21,7 @@ public class HomeController {
 	
 	@GetMapping("/")
 	public String index() {
+		System.out.println("Request of index");
 		return "index";
 	}
 	
@@ -42,6 +43,7 @@ public class HomeController {
 		
 	@GetMapping("/freeboardWritePage")
 	public String freeboardWritePage(HttpSession httpSession) {
+		System.out.println("Can access only only User");
 		Object loginedUser = httpSession.getAttribute("loginedUser");
 		if(loginedUser==null) {
 			return "login";
