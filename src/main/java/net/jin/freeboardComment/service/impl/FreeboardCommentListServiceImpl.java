@@ -5,7 +5,7 @@
  * Created on : Feb 2020
  * Contents : For Freeboard CommentList Service
  */
-package net.jin.service.freeboardComment;
+package net.jin.freeboardComment.service.impl;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -13,11 +13,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import net.jin.freeboardComment.service.FreeboardCommentListService;
 import net.jin.model.FreeboardComment;
 import net.jin.repository.FreeboardCommentRepository;
 
 @Service
-public class FreeboardCommentListService {
+public class FreeboardCommentListServiceImpl implements FreeboardCommentListService {
 
 	@Autowired
 	private FreeboardCommentRepository freeboardCommentRepository;

@@ -20,10 +20,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import net.jin.freeboardComment.service.FreeboardCommentListService;
 import net.jin.model.Freeboard;
 import net.jin.model.FreeboardComment;
 import net.jin.repository.FreeboardCommentRepository;
-import net.jin.service.freeboardComment.FreeboardCommentListService;
 
 @Controller
 public class FreeboardCommentController {
