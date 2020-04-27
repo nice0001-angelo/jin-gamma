@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import net.jin.model.Users;
 import net.jin.repository.UsersRepository;
 import net.jin.user.service.SignupService;
-import net.jin.user.service.UserPasswordHashClass;
+import net.jin.user.service.UserPasswordHashService;
 
 @Service
 public class SignupServiceImpl implements SignupService {
@@ -17,7 +17,7 @@ public class SignupServiceImpl implements SignupService {
 	private UsersRepository usersRepository;
 	
 	@Autowired
-	private UserPasswordHashClass userPasswordHashClass;
+	private UserPasswordHashService userPasswordHashClass;
 	
 	@Override
 	public String signupUser(HttpServletRequest request) {

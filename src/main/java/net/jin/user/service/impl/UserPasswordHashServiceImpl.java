@@ -5,14 +5,15 @@
  * Created on : Jan 2020
  * Contents : For UserPasswordHashing
  */
-package net.jin.user.service;
+package net.jin.user.service.impl;
 
 import java.security.MessageDigest;
 
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserPasswordHashClass {
+public class UserPasswordHashServiceImpl implements net.jin.user.service.UserPasswordHashService {
+	@Override
 	public String getSHA256(String plainText) {
 		String shaString = "";
 		try {

@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 import net.jin.model.Users;
 import net.jin.repository.UsersRepository;
 import net.jin.user.service.LoginService;
-import net.jin.user.service.UserPasswordHashClass;
+import net.jin.user.service.UserPasswordHashService;
 
 @Service
 public class LoginServiceImpl implements LoginService {
 	
 	
 	@Autowired
-	private UserPasswordHashClass userPasswordHashClass;
+	private UserPasswordHashService userPasswordHashClass;
 	
 	@Autowired
 	private UsersRepository usersRepository;
