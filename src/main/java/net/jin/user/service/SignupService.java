@@ -1,4 +1,4 @@
-package net.jin.service.user;
+package net.jin.user.service;
 
 import javax.servlet.http.HttpServletRequest;
 

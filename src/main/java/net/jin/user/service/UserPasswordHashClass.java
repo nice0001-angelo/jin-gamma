@@ -5,7 +5,7 @@
  * Created on : Jan 2020
  * Contents : For UserPasswordHashing
  */
-package net.jin.service.user;
+package net.jin.user.service;
 
 import java.security.MessageDigest;
 

@@ -1,4 +1,4 @@
-package net.jin.service.user;
+package net.jin.user.service.impl;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -8,9 +8,11 @@ import org.springframework.stereotype.Service;
 
 import net.jin.model.Users;
 import net.jin.repository.UsersRepository;
+import net.jin.user.service.LoginService;
+import net.jin.user.service.UserPasswordHashClass;
 
 @Service
-public class LoginService {
+public class LoginServiceImpl implements LoginService {
 	
 	
 	@Autowired
@@ -21,7 +23,8 @@ public class LoginService {
 	
 	@Autowired
 	private HttpSession httpSession;
-		
+	
+	@Override
 	public String loginUser(HttpServletRequest request) {
 		String userId = request.getParameter("user_id");
 		String userPassword = request.getParameter("user_pw");
