@@ -5,7 +5,7 @@
  * Created on : Feb 2020
  * Contents : For Paging Treatement Service
  */
-package net.jin.service.freeboard;
+package net.jin.freeboard.service;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;

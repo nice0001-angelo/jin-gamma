@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import net.jin.freeboard.service.FreeboardInfoService;
+import net.jin.freeboard.service.FreeboardListService;
+import net.jin.freeboard.service.FreeboardWriteService;
 import net.jin.repository.FreeboardRepository;
-import net.jin.service.freeboard.FreeboardInfoService;
-import net.jin.service.freeboard.FreeboardListService;
-import net.jin.service.freeboard.FreeboardWriteService;
 
 
 @Controller

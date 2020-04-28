@@ -5,7 +5,7 @@
  * Created on : Feb 2020
  * Contents : For Freeboard Write Service
  */
-package net.jin.service.freeboard;
+package net.jin.freeboard.service;
 
 import javax.servlet.http.HttpServletRequest;
 
