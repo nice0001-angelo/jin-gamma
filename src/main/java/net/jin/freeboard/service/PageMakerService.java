@@ -8,7 +8,6 @@
 package net.jin.freeboard.service;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Service;
 
 import net.jin.model.Freeboard;
 import net.jin.pageMaker.PageMaker;
