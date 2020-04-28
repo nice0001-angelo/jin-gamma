@@ -25,6 +25,12 @@ public class HomeController {
 		return "index";
 	}
 	
+	@GetMapping("/contact")
+	public String contact() {
+		System.out.println("Request of contact");
+		return "contact";
+	}
+	
 	@GetMapping("/signupPage")
 	public String signupPage() {
 		return "signup";
