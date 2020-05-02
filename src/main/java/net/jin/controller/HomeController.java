@@ -25,6 +25,12 @@ public class HomeController {
 		return "index";
 	}
 	
+	@GetMapping("/foodblog")
+	public String foodblog() {
+		System.out.println("Request of foodblog");
+		return "foodblog";
+	}
+	
 	@GetMapping("/contact")
 	public String contact() {
 		System.out.println("Request of contact");
